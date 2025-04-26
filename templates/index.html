@@ -9,5 +9,10 @@
 <body>
     <h1>Welcome to the Mini List</h1>
     <a href="/add">Add a new item</a>
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

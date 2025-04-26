@@ -19,4 +19,4 @@ def add_item():
     return render_template('add_item.html')
 
 if __name__ == '__main__':
-    app.run()  # Removed debug=True for production deployment
+    app.run()  
