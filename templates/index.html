@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mini List</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Welcome to the Mini List</h1>
-    <a href="/add">Add a new item</a>
-    <ul>
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col items-center py-10">
+    <h1 class="text-3xl font-bold mb-6 text-blue-600">📝 Welcome to Mini List</h1>
+    
+    <a href="/add" class="mb-6 text-white bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded transition-all duration-300">
+        ➕ Add a New Item
+    </a>
+
+    <ul class="bg-white shadow-md rounded-lg w-full max-w-md px-6 py-4 space-y-3">
         {% for item in items %}
-            <li>{{ item }}</li>
+            <li class="p-3 border rounded hover:bg-gray-100 transition-all duration-200">{{ item }}</li>
         {% endfor %}
     </ul>
 </body>
