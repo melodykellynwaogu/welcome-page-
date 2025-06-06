@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
     <title>Add Item</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col items-center py-10">
-    <h1 class="text-3xl font-bold text-green-600 mb-6">➕ Add a New Item</h1>
-    
-    <form action="/add" method="post" class="bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-4">
-        <label for="item" class="block font-semibold">Item:</label>
-        <input type="text" id="item" name="item" required 
-               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        
+<body class="bg-gray-900 min-h-screen text-gray-200 flex items-center justify-center p-4">
+    <form action="/add" method="post" class="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4 text-blue-400">➕ Add New Item</h1>
+
+        <label for="item" class="block mb-2 font-medium">Item:</label>
+        <input type="text" id="item" name="item" required
+               class="w-full px-4 py-2 mb-4 border border-gray-600 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+
         <button type="submit"
-                class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded transition duration-300">
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
             Add
         </button>
     </form>
