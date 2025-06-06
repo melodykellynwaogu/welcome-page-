@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Add Item</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Add a New Item</h1>
-    <form action="/add" method="post">
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" required>
-        <button type="submit">Add</button>
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col items-center py-10">
+    <h1 class="text-3xl font-bold text-green-600 mb-6">➕ Add a New Item</h1>
+    
+    <form action="/add" method="post" class="bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-4">
+        <label for="item" class="block font-semibold">Item:</label>
+        <input type="text" id="item" name="item" required 
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        
+        <button type="submit"
+                class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded transition duration-300">
+            Add
+        </button>
     </form>
 </body>
 </html>
